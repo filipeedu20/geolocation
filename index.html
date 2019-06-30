@@ -1,24 +1,23 @@
 <!doctype html>
-<html class="no-js" lang="pt-br">
-
+<html class="no-js" lang="">
 <head>
 	<meta charset="utf-8">
 	<title>Geolocalização</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="manifest" href="site.webmanifest">
-	<link rel="apple-touch-icon" href="icon.png">
-	<!-- Place favicon.ico in the root directory -->
+	<link rel="apple-touch-icon" href="icon.png">	
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/output.css">
 	<meta name="theme-color" content="#fafafa">
 </head>
 <body>
 	<html>
 	<body>
-		<div class='main'>
+		<div id='main'>
 			<p id="demo">Clique no botão para receber sua localização em Latitude e Longitude:</p>
-			<button onclick="getLocation()">Clique Aqui</button>
+			<button onclick="getLocation()" class='btn btn-blue'>Clique Aqui</button>
 		</div>
 		<script src="js/geolocalizacao.js"></script>
 		<script src="js/vendor/modernizr-3.7.1.min.js"></script>
@@ -41,4 +40,5 @@
 			ga('send', 'pageview')
 		</script>
 		<script src="https://www.google-analytics.com/analytics.js" async></script>
-	</body></html>
+	</body>
+	</html>
