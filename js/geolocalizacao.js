@@ -9,6 +9,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-	x.innerHTML = "Latitude: " + position.coords.latitude +
-		"<br>Longitude: " + position.coords.longitude;
+	let latitude  = position.coords.latitude;
+	let logintude = position.coords.longitude
+	x.innerHTML = `Latitude: ${latitude} 
+		<br>Longitude: ${logintude} `;
 }
