@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var longitude = position.coords.longitude;
 		var coordinate = new google.maps.LatLng(latitude, longitude);
 
+		
 		var optionsMap = {
 			center: coordinate,
 			zoom: 19,

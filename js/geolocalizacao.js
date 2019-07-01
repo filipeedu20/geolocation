@@ -1,4 +1,4 @@
-var x = document.getElementById("demo");
+const x = document.getElementById("demo");
 
 function getLocation() {
 	if (navigator.geolocation) {
@@ -10,7 +10,25 @@ function getLocation() {
 
 function showPosition(position) {
 	let latitude  = position.coords.latitude;
-	let logintude = position.coords.longitude
+	let longitude = position.coords.longitude
 	x.innerHTML = `Latitude: ${latitude} 
-		<br>Longitude: ${logintude} `;
+		<br>Longitude: ${longitude} `;
+	/**Destructuring assignt com objetos */
+	const coordenadas = {lat: latitude, long: longitude};
+	let {lat,long} = coordenadas;
+	console.log(coordenadas);
+
+	class Ponto{
+		constructor(local){
+			this.local = local;
+			this.latitude = latitude;
+			this.longitude = longitude;
+		}
+		getLocal(){
+			return this.local;
+		};
+		GetLatitude()
+	}
+
 }
+
