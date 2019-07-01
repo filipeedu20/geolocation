@@ -27,8 +27,22 @@ function showPosition(position) {
 		getLocal(){
 			return this.local;
 		};
-		GetLatitude()
+		getLatitude(){
+			return this.latitude;
+		};
+		getLongitude(){
+			return this.longitude;
+		};
 	}
+	//Criando uma nova instancia para Ponto
+	const NovoPonto = new Ponto('Casa');
 
+	//Definindo valores para Novo Ponto
+	NovoPonto.latitude(latitude);
+	NovoPonto.longitude(longitude);
+	//Acessando as propriedades
+	 console.log(NovoPonto.getLocal());
+	 console.log(NovoPonto.getLatitude().length);
+	 console.log(NovoPonto.getLongitude().length);
 }
 
