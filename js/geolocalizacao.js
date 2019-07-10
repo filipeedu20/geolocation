@@ -24,29 +24,30 @@ function showPosition(position) {
 	class Ponto{
 		constructor(local){
 			this.local = local;
-			this.latitude = latitude;
-			this.longitude = longitude;
+			this.lat = latitude;
+			this.long = longitude;
 		}
-		getLocal(){
+		getLocal() {
 			return this.local;
 		};
-		getLatitude(){
-			return this.latitude;
+		getLat() {
+			return this.lat;
 		};
-		getLongitude(){
-			return this.longitude;
+		getLong() {
+			return this.long;
 		};
 	}
 	//Criando uma nova instancia para Ponto
-	const NovoPonto = new Ponto('Casa');
+	const NovoPonto = new Ponto('Ponto onde está o dispositivo');
 
 	//Definindo valores para Novo Ponto
-	NovoPonto.latitude(latitude);
-	NovoPonto.longitude(longitude);
+	NovoPonto.getLat();
+	NovoPonto.getLong();
+	
 	//Acessando as propriedades
 	 console.log(NovoPonto.getLocal());
-	 console.log(NovoPonto.getLatitude().length);
-	 console.log(NovoPonto.getLongitude().length);
+	 console.log(NovoPonto.getLat());
+	 console.log(NovoPonto.getLong());
 }
 		
 
