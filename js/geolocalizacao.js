@@ -1,26 +1,24 @@
 const x = document.getElementById("demo");
 var map ;
 
-
-
 function getLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
+	var retorno = false; 
+	if (navigator.geolocation) {		
+		retorno = navigator.geolocation.getCurrentPosition(showPosition);		
 	} else {
-		x.innerHTML = "O seu navegador não suporta Geolocalização.";
-	}
+		retorno = "O seu navegador não suporta Geolocalização.";
+	}	
+	console.log(retorno);
+	return retorno;
 }
 
 function showPosition(position) {
 	let latitude  = position.coords.latitude;
 	let longitude = position.coords.longitude
-	x.innerHTML = `Latitude: ${latitude} 
-		<br>Longitude: ${longitude} `;
-	/**Destructuring assignt com objetos */
+	
 	const coordenadas = {lat: latitude, long: longitude};
 	let {lat,long} = coordenadas;
-	console.log(coordenadas);
-
+	
 	class Ponto{
 		constructor(local){
 			this.local = local;
@@ -44,10 +42,8 @@ function showPosition(position) {
 	NovoPonto.getLat();
 	NovoPonto.getLong();
 	
-	//Acessando as propriedades
-	 console.log(NovoPonto.getLocal());
-	 console.log(NovoPonto.getLat());
-	 console.log(NovoPonto.getLong());
+	// Chama função passando coordenadas do local onde o usuário está 
+	initMap(NovoPonto.getLat(),NovoPonto.getLong());	
 }
 		
 
@@ -84,10 +80,13 @@ function loadLocations(){
 	});
 }
 // Inicia mapa 
-function initMap() {
+function initMap(lat,long) {
 	
-	var latitude = -19.919086;
-	var longitude =   -43.938810;
+	// Inicializa função para carregar local do usuário
+	getLocation();	
+
+	var latitude = lat;
+	var longitude = long;
 	
 	map = new google.maps.Map(document.getElementById('map'), {
 	center: {lat: latitude, lng:  longitude},				
