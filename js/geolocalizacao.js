@@ -4,26 +4,31 @@ var map ;
 // array de coordenadas e endereços 
 pontos = [
 	{
-		"Latitude": -19.918178,
-		"Longitude": -43.942461,
-		"Endereco": 'Nome da rua 1'
+		"Latitude":-19.931349,
+		"Longitude": -43.934431 ,
+		"Endereco": 'Avenida Brasil, 1666 - Santa Efigênia'
 	},
 	
 	{
-		"Latitude": -19.920393,
-		"Longitude": -43.944180,
-		"Endereco": 'Nome da rua 2'
+		"Latitude": -19.929958,
+		"Longitude": -43.937014,
+		"Endereco": 'Rua Bernardo Guimarães, 1399-1255 - Funcionários'
 	},
 	{
-		"Latitude": -19.915134,
-		"Longitude": -43.947737,
-		"Endereco": 'Nome da rua 3'
+		"Latitude": -19.934094,
+		"Longitude": -43.936242,
+		"Endereco": 'Rua Santa Rita Durão, 1245-1101 - Funcionários'
 
 	},
 	{
-		"Latitude": -19.904994,
-		"Longitude": -43.898574,
-		"Endereco": 'Nome da rua 4'
+		"Latitude": -19.932754,
+		"Longitude":-43.945150,
+		"Endereco": 'Rua Curitiba, 2258 - Lourdes'
+	},
+	{
+		"Latitude": -19.935498,
+		"Longitude":-43.958608,
+		"Endereco": 'Rua Afonso XIII, 593-497 - Gutierrez'
 	}
 
 ];
