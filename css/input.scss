@@ -1,9 +1,15 @@
+body{
+    height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+}
+
 #main{
     width: 97%;
-
+    font-family: Helvetica, sans-serif;
     p,
-    div{
-        font-size: 2em;
+    div{       
         a{
             font-weight: bold;
         }
@@ -21,4 +27,21 @@
 }
 .btn-blue{
     background: #0069D9;
+}
+#map{
+    height:90%;
+}
+body{
+    height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+}
+.nome_local{
+    height: 100px;
+    width: 100%;
+    background: #A9CCE3;
+    margin-top: 10px;
+    padding: 10px;
+    border: solid 1px #2874A6;
 }
