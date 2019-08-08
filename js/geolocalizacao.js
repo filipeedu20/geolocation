@@ -1,6 +1,41 @@
 const x = document.getElementById("demo");
 var map ;
 
+// array de coordenadas e endereços 
+pontos = [
+	{
+		"Latitude": -19.918178,
+		"Longitude": -43.942461,
+		"Endereco": 'Nome da rua 1'
+	},
+	
+	{
+		"Latitude": -19.920393,
+		"Longitude": -43.944180,
+		"Endereco": 'Nome da rua 2'
+	},
+	{
+		"Latitude": -19.915134,
+		"Longitude": -43.947737,
+		"Endereco": 'Nome da rua 3'
+
+	},
+	{
+		"Latitude": -19.904994,
+		"Longitude": -43.898574,
+		"Endereco": 'Nome da rua 4'
+	}
+
+];
+
+function lista_endereco(pontos){	
+	$('.nome_local').remove();
+	$.each(pontos, function(index, pontos) {
+		// lista nome dos endereços em uma div
+		$(".endereco").append("<div class='nome_local'>"+pontos.Endereco+"</div>");
+	});
+}
+
 function getLocation() {
 	var retorno = false; 
 	if (navigator.geolocation) {		
@@ -44,31 +79,12 @@ function showPosition(position) {
 	
 	// Chama função passando coordenadas do local onde o usuário está 
 	initMap(NovoPonto.getLat(),NovoPonto.getLong());	
+	// lista endereços
+	lista_endereco(pontos)
 }
 		
-
-
-function loadLocations(){
-	pontos = [
-		{
-			"Latitude": -19.918178,
-			"Longitude": -43.942461
-		},
-		
-		{
-			"Latitude": -19.920393,
-			"Longitude": -43.944180
-		},
-		{
-			"Latitude": -19.915134,
-			"Longitude": -43.947737
-		},
-		{
-			"Latitude": -19.904994,
-			"Longitude": -43.898574
-		}
-
-	];
+function loadLocations(pontos){
+	
 
 	$.each(pontos, function(index, pontos) {		
 		var marker = new google.maps.Marker({
@@ -79,6 +95,7 @@ function loadLocations(){
 		});
 	});
 }
+
 // Inicia mapa 
 function initMap(lat,long) {
 	
@@ -101,5 +118,11 @@ function initMap(lat,long) {
 	});
 
 	// abre pontos marcados no mapa 
-	loadLocations();
+	loadLocations(pontos);
+
+	// lista endereços próximo ao usuário	
 }
+
+
+
+
